@@ -4,6 +4,7 @@ var cors = require('cors');
 const UserSignup = require("./routes/signup.route");
 const UserLogin = require("./routes/login.route");
 const Products = require("./routes/products.route");
+const Test = require("./routes/test.route")
 
 const app = express();
 app.use(cors(
@@ -19,6 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/Signup", UserSignup);
 app.use("/Login", UserLogin);
 app.use("/Products", Products)
+app.use("/Test", Test);
 
 
 app.listen(8081, () => {
